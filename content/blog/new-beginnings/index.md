@@ -4,6 +4,9 @@ date: "2021-09-20T23:36:00.000Z"
 description: Although some people fear death, the fact of death acts as a motivator for life. When you think of every day as one step closer to the grave, what can you do that gives meaning to life?
 ---
 
+![Hourglass of time slipping away](https://user-images.githubusercontent.com/30791155/134012107-9e9e525c-1f62-4317-8fe8-9a538b515f17.png)
+
+
 As Benjamin Franklin said to Jean-Baptiste Le Roy, "The only two certainties in life are death and taxes". However, there are some countries which don't have taxes such as the UAE and Monaco. So that only leaves one certainty: death. Although some people fear death, the fact of death acts as a motivator for life. When you think of every day as one step closer to the grave, what can you do that gives meaning to life?
 
 For many, life is about leaving a legacy - a mark to say to the rest of the world, "I existed". That's why you might see some people graffiti in the public restrooms, "Brandon was here", or people carving their initials into a tree. However, legacies don't have to be in the form of engraved names. A legacy can be in the form of a child, writing a book, or even creating an artwork.
