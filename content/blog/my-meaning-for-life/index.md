@@ -4,8 +4,7 @@ date: "2021-09-20T23:36:00.000Z"
 description: Although some people fear death, the fact of death acts as a motivator for life. When you think of every day as one step closer to the grave, what can you do that gives meaning to life?
 ---
 
-![Hourglass of time slipping away](https://user-images.githubusercontent.com/30791155/134012107-9e9e525c-1f62-4317-8fe8-9a538b515f17.png)
-
+![Hourglass of time slipping away](./hourglass.png "What will you do with the remaining days alive?")
 
 As Benjamin Franklin said to Jean-Baptiste Le Roy, "The only two certainties in life are death and taxes". However, there are some countries which don't have taxes such as the UAE and Monaco. So that only leaves one certainty: death. Although some people fear death, the fact of death acts as a motivator for life. When you think of every day as one step closer to the grave, what can you do that gives meaning to life?
 
