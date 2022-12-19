@@ -1,14 +1,43 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, PageProps } from "gatsby"
+import test from 'gatsby-transformer-remark'
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import {Comments} from "../components/comments"
+import { FrontmatterContent, HTML, ListContent } from "mdast"
 
-const BlogPostTemplate = ({ data, location }) => {
+type PostMarkdown = {
+  id: string,
+  frontmatter: {
+    title: string,
+    description: string,
+    date: string,
+  }
+  excerpt: string,
+  html: string,
+  fields: {
+    slug: string,
+  }
+}
+
+type BlogPostDataProps = {
+  site: {
+    siteMetadata: {
+      title: string
+    }
+  },
+  markdownRemark: PostMarkdown,
+  previous: PostMarkdown,
+  next: PostMarkdown,
+}
+
+const BlogPostTemplate = ({ data, location, uri }: PageProps<BlogPostDataProps>) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  const id = post.id
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -60,6 +89,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
+      <Comments title={siteTitle} url={uri} id={id}/>
     </Layout>
   )
 }

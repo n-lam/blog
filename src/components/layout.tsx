@@ -1,7 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-const Layout = ({ location, title, children }) => {
+type LayoutProps = PropsWithChildren<{
+  location: string,
+  title: String,
+}>
+
+const Layout = ({ location, title, children }: LayoutProps) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
