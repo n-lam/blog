@@ -1,12 +1,14 @@
 import * as React from "react"
 import { Link, graphql, PageProps } from "gatsby"
-import test from 'gatsby-transformer-remark'
 
+// @ts-ignore
 import Bio from "../components/bio"
+// @ts-ignore
 import Layout from "../components/layout"
+// @ts-ignore
 import Seo from "../components/seo"
+// @ts-ignore
 import {Comments} from "../components/comments"
-import { FrontmatterContent, HTML, ListContent } from "mdast"
 
 type PostMarkdown = {
   id: string,
@@ -25,7 +27,8 @@ type PostMarkdown = {
 type BlogPostDataProps = {
   site: {
     siteMetadata: {
-      title: string
+      title: string,
+      siteUrl: string
     }
   },
   markdownRemark: PostMarkdown,
@@ -33,7 +36,7 @@ type BlogPostDataProps = {
   next: PostMarkdown,
 }
 
-const BlogPostTemplate = ({ data, location, uri }: PageProps<BlogPostDataProps>) => {
+const BlogPostTemplate = ({ data, location, path }: PageProps<BlogPostDataProps>) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
@@ -89,7 +92,7 @@ const BlogPostTemplate = ({ data, location, uri }: PageProps<BlogPostDataProps>)
           </li>
         </ul>
       </nav>
-      <Comments title={siteTitle} url={uri} id={id}/>
+      <Comments title={siteTitle} url={`${process.env.GATSBY_DISQUS_DOMAIN}${path}`} id={id}/>
     </Layout>
   )
 }
@@ -104,7 +107,8 @@ export const pageQuery = graphql`
   ) {
     site {
       siteMetadata {
-        title
+        title,
+        siteUrl
       }
     }
     markdownRemark(id: { eq: $id }) {
