@@ -92,7 +92,8 @@ const BlogPostTemplate = ({ data, location, path }: PageProps<BlogPostDataProps>
           </li>
         </ul>
       </nav>
-      <Comments title={siteTitle} url={`${process.env.GATSBY_DISQUS_DOMAIN}${path}`} id={id}/>
+      <Comments title={siteTitle} url={`${process.env.GATSBY_DISQUS_DOMAIN}`} id={id}/>
+      {/* <Comments title={siteTitle} url={`${process.env.GATSBY_DISQUS_DOMAIN}${path}`} id={id}/> */}
     </Layout>
   )
 }
