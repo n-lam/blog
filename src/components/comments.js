@@ -11,5 +11,8 @@ export const Comments = ({ url, id, title }) => {
     /* Replace PAGE_TITLE with the title of the page */
     title,
   }
+
+  console.log('debug', disqusConfig);
+  
   return <Disqus config={disqusConfig} />
 }
