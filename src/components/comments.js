@@ -7,8 +7,6 @@ export const Comments = ({ id }) => {
     /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     identifier: id,
   }
-
-  console.log('debug', disqusConfig);
   
   return <Disqus config={disqusConfig} />
 }
